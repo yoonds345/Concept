@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class main
+{   
+    public static void main(String[] args)
+    {   
+        Scanner sc = new Scanner(System.in);
+
+        int n
+       do{
+             System.out.println("양의 정수 값을 입력하세요 :  ");
+              n = sc.nextInt();
+         } while(n <= 0);
+
+         int count =0; //자릿수
+         while( n > 0 ){
+             n /= 10; //자릿수는 1 10 100 1000... 이런식으로 10단위로 늘어나기 때문에 10으로 나눔
+             count++
+         }
+
+    
+        System.out.print(count);
+
+    }
+}
