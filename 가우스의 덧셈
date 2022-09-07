@@ -1,0 +1,33 @@
+가우스의 뎃셈?
+예) 1부터 100까지의 합 구하기
+1 + 2 + 3 + 4 + ... + 97 + 98 + 99 + 100 = ??
+
+1과 100을 더하면 101
+2와 99를 더하면 101
+...(반복)
+101을 50번 반복
+
+결론 : 첫번째와 마지막번째를 짝으로 이루면 총 갯수의 절반 만큼 나온다
+      첫번째와 마지막 번째를 더한 모든 쌍의 합은 같다
+      짝수 일때 식 :(1 + n) * (n/2)
+      홀수 일때 식 : (1 + n) * (n/2) + ( n%2 == 0 ? 0 : (1+n)/2 ); //가운데 숫자가 하나 남는다
+
+
+import java.util.Scanner;
+public class main
+{
+    public static void main(String[] args)
+    {   Scanner sc = new Scanner(System.in);
+    
+        System.out.println("1부터 n까지의 정수 합을 구하기");
+        System.out.print("n의 값 : ");
+        int n = sc.nextInt();
+
+        int sum = ( 1 + n ) * (n/2) +  ( n%2 == 0 ? 0 : (1+n)/2 );
+                                    //2로 나눈 값이 0이라면 0을 더하고, 0이 아니라면 가운데 숫자를 구해서 더해준다.
+
+        System.out.println(sum);
+
+
+    }
+}
