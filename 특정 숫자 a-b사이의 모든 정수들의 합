@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class main
+{   
+    static int sumof(int a, int b){
+        int max;
+        int min;
+
+        if(a<b){
+            max =b;
+            min =a;
+        } else {
+                max =a;
+                min =b;
+            }
+        
+        int sum = 0;
+        for (int i =min; i<=max; i++)
+            sum += i;
+            return sum;
+    }
+
+    public static void main(String[] args)
+    {   Scanner sc = new Scanner(System.in);
+    
+        System.out.println("a부터 b 사이의 정수들의 합 구하기");
+
+        System.out.print("a의 값 : ");
+        int a = sc.nextInt();
+
+        System.out.print("b의 값 : ");
+        int b = sc.nextInt();
+
+        System.out.println(sumof(a,b));
+
+
+    }
+}
